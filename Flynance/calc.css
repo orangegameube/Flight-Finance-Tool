@@ -1,0 +1,207 @@
+#logo{
+  color:white;
+  font-family: 'Oswald', sans-serif;
+  font-size: 2vw;
+}
+
+.navbar {
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: black;
+}
+
+.navlist{
+  display: flex;
+  margin: 0px;
+}
+
+li {
+  list-style-type: none;
+  margin: 0 10px;
+  display: block;
+  font-family: "Open Sans", sans-serif;
+}
+
+.navbar a {
+  font-weight: bold;
+  font-size: 1.7vw;
+  display: block;
+  padding: 0.5vw;
+  text-decoration: none;
+}
+
+.navbar a:hover {
+  background-color: rgb(28, 28, 28);
+  border-radius: 15px;
+}
+
+.Header {
+  padding: 30px;
+  font-family: sans-serif, Georgia, Times, serif;
+  text-align: center;
+  font-size: 2vw;
+}
+
+.Gridbase {
+  display: grid;
+  grid-template-areas: 'one two three four four';
+  padding: 2.5vw;
+  grid-column-gap: 2.5vw;
+  grid-row-gap: 1vw;
+}
+
+.ToolHead {
+  font-size: 25px;
+  margin-bottom: .5rem;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+#CalcHead{
+  padding: 20px;
+  text-align: center;
+  background-image: url("Images/Calcsky.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-size: 50px;
+  color: white;
+  font-family: Oswald, sans-serif, Times, serif;
+}
+
+#TimeHead{
+  padding: 20px;
+  text-align: center;
+  background-color: black;
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-size: 50px;
+  color: white;
+  font-family: Oswald, sans-serif, Times, serif;
+  margin-bottom: 40px;
+}
+
+#hourContainer{
+  grid-area: one;
+}
+
+#rateContainer{
+  grid-area: two;
+}
+
+#addOnContainer{
+  grid-area: three;
+}
+
+#resultContainer{
+  grid-area: four;
+}
+
+.catContainer {
+  padding: 0.7vw;
+  font-family: "Open Sans", sans-serif, Times, serif;
+  font-size: 16px;
+}
+
+#calcNotice{
+  padding-top: 1vw;
+  font-size: 30px;
+  font-family: "Open Sans", sans-serif;
+  display: flex;
+}
+
+#calcBtn {
+  margin: 1vw;
+  padding: 0.3vw;
+}
+
+.remCalced {
+  padding: 0.4vw;
+  font-size: 20px;
+  font-family: "Open Sans", sans-serif, Times, serif;
+}
+
+#TimeHead p{
+  font-size: 16px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont;
+  max-width: 50%;
+  margin: auto;
+}
+
+.resCont {
+  padding: 0.8vw 0.4vw 0.8vw 0.4vw;
+  font-size: 28px;
+  font-family: "Open Sans", sans-serif, Times, serif;
+  justify-content: center;
+}
+
+.slidecontainer{
+  font-size: 28px;
+  font-family: "Open Sans", sans-serif, Times, serif;
+  text-align: center;
+  padding-left: 5vw;
+  padding-bottom: 3vw;
+  float:left;
+}
+
+#estCost{
+  font-family: "Open Sans", sans-serif, Times, serif;
+  text-align: center;
+}
+
+.rangecontainer{
+  font-size: 28px;
+  font-family: "Open Sans", sans-serif, Times, serif;
+  text-align: center;
+  padding-right: 5vw;
+  padding-bottom: 3vw;
+  float:right;
+}
+
+.butCont{
+  text-align: center;
+}
+
+#timeBtn{
+  padding: 1vw 2vw 1vw 2vw;
+  margin-top: 15px;
+  margin-bottom: 20px;
+}
+
+
+
+
+@media all and (max-width: 700px) {
+  .navbar a {
+    font-size: 3.5vw;
+  }
+  #logo {
+    font-size: 5vw;
+    margin: 0px;
+  }
+  .Header {
+    font-size: 4vw;
+  }
+  .Gridbase {
+    grid-template-areas: 'one' 'two' 'three' 'four';
+    padding: 20px;
+  }
+  #CalcHead {
+    font-size: 28px;
+  }
+  #calcBtn{
+    margin: 20px 0px 15px 0px;
+    padding: 5px;
+    display: block;
+  }
+  p {
+    margin-top: 25px;
+  }
+  label {
+    margin-top: 20px;
+  }
+  #pLabel{
+    margin-top: 5px;
+  }
+}

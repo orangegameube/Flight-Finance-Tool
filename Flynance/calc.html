@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>replit</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link href="calc.css" rel="stylesheet" type="text/css" />
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js">
+  </script>
+
+
+</head>
+
+
+<body>
+
+  
+    <div class='navbar'>
+      <h3 id='logo'>Flynance</h3>
+        <nav>
+          <ul class="navlist">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="donate.html">Donate</a></li>
+          </ul>
+        </nav>
+      </div> 
+
+
+    <div id="CalcHead">Calculate the cost of your remaining flight instruction</div>
+
+
+    <div class='Gridbase', id="CalcGrid">'
+
+
+      <div id="hourContainer">
+
+          <h1 class="ToolHead">Your Logged Hours:</h1>
+
+          <div class="catContainer">
+            <p class="calcInput">Dual time (no xc, night, etc.):</p>
+            <input type="number" id="dual" />
+          </div>
+
+          <div class="catContainer">
+            <p class="calcInput">Solo time (no xc):</p>
+            <input type="number" id="solo" />
+          </div>
+
+          <div class="catContainer">
+            <p class="calcInput">Test prep time (optional, <br>set to 3 if not required)</p>
+            <input type="number" id="study" />
+          </div>
+
+          <div class="catContainer">
+            <p class="calcInput">Instrument time:</p>
+            <input type="number" id="instr" />
+          </div>
+
+          <div class="catContainer">
+            <p class="calcInput">Night time:</p>
+            <input type="number" id="night" />
+          </div>
+
+          <div class="catContainer">
+            <p class="calcInput">Dual XC time:</p>
+            <input type="number" id="dualxc" />
+          </div>
+
+          <div class="catContainer">
+            <p class="calcInput">Solo XC time:</p>
+            <input type="number" id="soloxc" />
+          </div>
+
+      </div>
+
+      <div id="rateContainer">
+
+          <h1 class="ToolHead">Your school's rates:</h1>
+
+          <div class="catContainer">
+            <p class="calcInput">Dual (aircraft + instructor) rate:</p>
+            <input type="number" id="dualRate" />
+          </div>
+
+          <div class="catContainer">
+            <p class="calcInput">Solo (aircraft only) rate:</p>
+            <input type="number" id="soloRate" />
+          </div>
+
+          <div class="catContainer">
+            <p class="calcInput">Ground (instructor, no flight) rate:</p>
+            <input type="number" id="groundRate" />
+          </div>
+
+          <div class="catContainer">
+            <p class="calcInput">Tax rate (in percent):</p>
+            <input type="number" id="taxRate" />
+          </div>
+
+        <div class="catContainer">
+          <input type="checkbox" class="calcInput" id="tachTrue" name="tachTrue">
+          <label for="tachTrue" class="calcInput">Rate based on tachometer?</label>
+          <p id="pLabel">Tachometer costs are estimated<br>as 80% of non-tach time!!</p>
+        </div>
+
+      </div>
+
+
+      <div id="addOnContainer">
+
+        <h1 class="ToolHead">Additional costs:</h1>
+
+        <div class="catContainer"> 
+          <p class="calcInput">Ground school (default: Sporty's)</p>
+          <input type="number" id="grSch" value="300"/>
+        </div>
+
+        <div class="catContainer"> 
+          <p class="calcInput">Written exam fee (default: current)</p>
+          <input type="number" id="writFee" value="175"/>
+        </div>
+
+        <div class="catContainer">
+          <p class="calcInput">Headset cost (default: David<br>Clark Headset H10-13.4)</p>
+          <input type="number" id="headset" value="384"/>
+        </div>
+
+        <div class="catContainer"> 
+          <p class="calcInput">Medical exam (default: Class III)</p>
+          <input type="number" id="medExam" value="60"/>
+        </div>
+
+        <div class="catContainer"> 
+          <p class="calcInput">Checkride examiner (default: $200)</p>
+          <input type="number" id="dpeFee" value="200"/>
+        </div>
+
+        <div class="catContainer"> 
+          <p class="calcInput">Books (default: PHAK, POH, FAR/AIM)</p>
+          <input type="number" id="studyMat" value="65"/>
+        </div>
+
+        <button type="button" class="btn btn-primary" id="calcBtn">Calculate</button>
+
+      </div>
+
+
+      
+      <div id="resultContainer">
+
+        <h1 id="resultHead">Your Results:</h1>
+
+        <div class="remCalced" id="HdualRem"></div>
+        <div class="remCalced", id="HsoloRem"></div>
+        <div class="remCalced", id="HstudyRem"></div>
+        <div class="remCalced", id="HinstrRem"></div>
+        <div class="remCalced", id="HnightRem"></div>
+        <div class="remCalced", id="HdualxcRem"></div>
+        <div class="remCalced", id="HsoloxcRem"></div>
+
+        <div class="resCont" id="oneTimeCost"></div>
+
+        <div class="resCont" id="hoursCost"></div>
+
+        <div class="resCont" id="totCost"></div>
+
+      </div>
+    
+    </div>
+
+    <div id="TimeHead">
+      <h2>Estimate your extra costs for repeated lessons</h2>
+      <p>Almost all student pilots don't get their private pilot certificate in just over the minimum of 40 hours. Use this tool to estimate what is likely to be near your true cost of training based on how many lessons you do per week.</p>
+      <p>The more often you fly per week, the more likely you are to retain the skills you learn. More retaining equals less repeat lessons. As a result, flying more often per week leads to lesser costs of training if there's no need for additional lessons to make up for forgetting.</p>
+    </div>
+
+    <div class="timeCalc">
+
+      <div class="slidecontainer">
+        <p>Amount of lessons per week:</p>
+        <input type="range" min="1" max="5" value="2" id="slider">
+        <p id="demo"></p>
+        
+      </div>
+
+      <div class="rangecontainer">
+        <p>Low---Middle---High</p>
+        <input type="range" min="50" max="150" value="100" id="endSlide">
+        <p id="demo"></p>
+      </div>
+
+      <div class="resCont">
+        
+        <div id="estCost"></div>
+
+        <div class="butCont">
+          <button type="button" class="btn btn-primary" id="timeBtn">Estimate</button>
+        </div>
+
+      </div>
+
+
+      
+    </div>
+
+
+
+    <script src="calc.js"></script>
+
+</body>
+
+</html>
